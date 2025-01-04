@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BFFBF30D2D27E28C0091E33D /* BluetoothPermission in Frameworks */ = {isa = PBXBuildFile; productRef = BFFBF30C2D27E28C0091E33D /* BluetoothPermission */; };
+		BFFBF30F2D27E28C0091E33D /* CalendarPermission in Frameworks */ = {isa = PBXBuildFile; productRef = BFFBF30E2D27E28C0091E33D /* CalendarPermission */; };
+		BFFBF3112D27E28C0091E33D /* CameraPermission in Frameworks */ = {isa = PBXBuildFile; productRef = BFFBF3102D27E28C0091E33D /* CameraPermission */; };
+		BFFBF3132D27E28C0091E33D /* ContactsPermission in Frameworks */ = {isa = PBXBuildFile; productRef = BFFBF3122D27E28C0091E33D /* ContactsPermission */; };
+		BFFBF3152D27E28C0091E33D /* FaceIDPermission in Frameworks */ = {isa = PBXBuildFile; productRef = BFFBF3142D27E28C0091E33D /* FaceIDPermission */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		BF1BB09A2D09374F00E7D8E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +37,22 @@
 		BF1BB0A32D09374F00E7D8E5 /* PhoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BF1973692D0C197700F3A2E9 /* Exceptions for "Phone" folder in "Phone" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BF1BB0862D09374E00E7D8E5 /* Phone */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BF1BB0892D09374E00E7D8E5 /* Phone */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BF1973692D0C197700F3A2E9 /* Exceptions for "Phone" folder in "Phone" target */,
+			);
 			path = Phone;
 			sourceTree = "<group>";
 		};
@@ -52,6 +73,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFFBF30D2D27E28C0091E33D /* BluetoothPermission in Frameworks */,
+				BFFBF3152D27E28C0091E33D /* FaceIDPermission in Frameworks */,
+				BFFBF30F2D27E28C0091E33D /* CalendarPermission in Frameworks */,
+				BFFBF3132D27E28C0091E33D /* ContactsPermission in Frameworks */,
+				BFFBF3112D27E28C0091E33D /* CameraPermission in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +138,11 @@
 			);
 			name = Phone;
 			packageProductDependencies = (
+				BFFBF30C2D27E28C0091E33D /* BluetoothPermission */,
+				BFFBF30E2D27E28C0091E33D /* CalendarPermission */,
+				BFFBF3102D27E28C0091E33D /* CameraPermission */,
+				BFFBF3122D27E28C0091E33D /* ContactsPermission */,
+				BFFBF3142D27E28C0091E33D /* FaceIDPermission */,
 			);
 			productName = Phone;
 			productReference = BF1BB0872D09374E00E7D8E5 /* Phone.app */;
@@ -195,6 +226,9 @@
 			);
 			mainGroup = BF1BB07E2D09374E00E7D8E5;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BFFBF30B2D27DBAF0091E33D /* XCRemoteSwiftPackageReference "PermissionsKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BF1BB0882D09374E00E7D8E5 /* Products */;
 			projectDirPath = "";
@@ -398,6 +432,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Phone/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Phone/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -426,6 +463,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Phone/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Phone/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -552,6 +592,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BFFBF30B2D27DBAF0091E33D /* XCRemoteSwiftPackageReference "PermissionsKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparrowcode/PermissionsKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BFFBF30C2D27E28C0091E33D /* BluetoothPermission */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFFBF30B2D27DBAF0091E33D /* XCRemoteSwiftPackageReference "PermissionsKit" */;
+			productName = BluetoothPermission;
+		};
+		BFFBF30E2D27E28C0091E33D /* CalendarPermission */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFFBF30B2D27DBAF0091E33D /* XCRemoteSwiftPackageReference "PermissionsKit" */;
+			productName = CalendarPermission;
+		};
+		BFFBF3102D27E28C0091E33D /* CameraPermission */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFFBF30B2D27DBAF0091E33D /* XCRemoteSwiftPackageReference "PermissionsKit" */;
+			productName = CameraPermission;
+		};
+		BFFBF3122D27E28C0091E33D /* ContactsPermission */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFFBF30B2D27DBAF0091E33D /* XCRemoteSwiftPackageReference "PermissionsKit" */;
+			productName = ContactsPermission;
+		};
+		BFFBF3142D27E28C0091E33D /* FaceIDPermission */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFFBF30B2D27DBAF0091E33D /* XCRemoteSwiftPackageReference "PermissionsKit" */;
+			productName = FaceIDPermission;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BF1BB07F2D09374E00E7D8E5 /* Project object */;
 }
